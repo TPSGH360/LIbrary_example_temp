@@ -2,32 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New Book</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
   </head>
   <body>
-    <h1>Add a New Book</h1>
-    <form method="POST">
-      <label for="title">Title:</label><br />
-      <input type="text" id="title" name="title" /><br /><br />
+    <div class="container mt-5">
+      <h1>Add a New Book</h1>
+      <form method="POST">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input type="text" class="form-control" id="title" name="title" />
+        </div>
 
-      <label for="author">Author:</label><br />
-      <input type="text" id="author" name="author" /><br /><br />
+        <div class="form-group">
+          <label for="author">Author:</label>
+          <input type="text" class="form-control" id="author" name="author" />
+        </div>
 
-      <label for="isbn">ISBN:</label><br />
-      <input type="text" id="isbn" name="isbn" /><br /><br />
+        <div class="form-group">
+          <label for="isbn">ISBN:</label>
+          <input type="text" class="form-control" id="isbn" name="isbn" />
+        </div>
 
-      <label for="published_year">Published Year:</label><br />
-      <input
-        type="number"
-        id="published_year"
-        name="published_year"
-      /><br /><br />
+        <div class="form-group">
+          <label for="published_year">Published Year:</label>
+          <input
+            type="number"
+            class="form-control"
+            id="published_year"
+            name="published_year"
+          />
+        </div>
 
-      <label for="genre">Genre:</label><br />
-      <input type="text" id="genre" name="genre" /><br /><br />
+        <div class="form-group">
+          <label for="genre">Genre:</label>
+          <input type="text" class="form-control" id="genre" name="genre" />
+        </div>
 
-      <button type="submit">Add Book</button>
-    </form>
-    <a href="{{ url_for('index') }}">Back to Home</a>
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </form>
+      <a href="{{ url_for('index') }}" class="btn btn-secondary mt-3"
+        >Back to Home</a
+      >
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </body>
 </html>
